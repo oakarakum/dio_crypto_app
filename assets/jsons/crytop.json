@@ -1,0 +1,24 @@
+{
+    "success": true,
+    "result": {
+      "base": "USD",
+      "lastupdate": "2019-12-25 11:22 UTC",
+      "data": [
+        {
+          "code": "USD",
+          "name": "US Dollar",
+          "rate": 1,
+          "calculatedstr": "1000.00",
+          "calculated": 1000
+        },
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "rate": 0.9015829342,
+          "calculatedstr": "901.58",
+          "calculated": 901.58
+        },
+        "..."
+      ]
+    }
+  }
