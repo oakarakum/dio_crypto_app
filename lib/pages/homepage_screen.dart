@@ -16,22 +16,27 @@ class _HomepageScreenState extends State<HomepageScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 213, 199, 199),
+        // backgroundColor: Colors.grey[368],
+        centerTitle: true,
         title: Text(
           'CRYPTOBASE',
           style: TextStyle(
-              color: Colors.blue, fontSize: 25, fontWeight: FontWeight.w700),
+              letterSpacing: 2,
+              color: Colors.black,
+              fontSize: 25,
+              fontWeight: FontWeight.w700),
         ),
-        backgroundColor: Colors.grey[368],
       ),
       body: ListView(
-        scrollDirection: Axis.horizontal,
         children: [
           Padding(
             padding: EdgeInsets.all(10),
             child: Container(
-              height: 100,
+              height: 75,
+              width: 75,
               decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: Color.fromARGB(255, 226, 213, 213),
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
@@ -40,12 +45,50 @@ class _HomepageScreenState extends State<HomepageScreen> {
                         blurRadius: 10,
                         spreadRadius: -1),
                     BoxShadow(
-                        color: Colors.grey,
+                        color: Colors.white,
                         offset: Offset(-4, -4),
                         blurRadius: 10,
-                        spreadRadius: -1)
+                        spreadRadius: 1)
                   ]),
-              child: Image.network(""),
+              child: Row(
+                //mainAxisAlignment: MainAxisAlignment.center,
+                //crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 7),
+                    child: SizedBox(
+                        height: 125,
+                        width: 75,
+                        child: Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Image.asset(
+                            "assets/images/bitcoin.png",
+                            fit: BoxFit.cover,
+                          ),
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Bitcoin",
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        ),
+                        Text("btc")
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 185),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 13),
+                    child: Column(
+                      children: [Text("36273"), Text("933.13"), Text("2.6%")],
+                    ),
+                  )
+                ],
+              ),
             ),
           )
         ],
